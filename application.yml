@@ -1,0 +1,28 @@
+spring:
+  application.name: moviecruiser
+  data:
+    mongodb:
+      database: stackroute
+      uri: mongodb://localhost:27017
+eureka:
+  client:
+    service.uri.defaultZone: http://localhost:8090/eureka
+    register-with-eureka: true
+    fetch.registry: true
+
+server:
+  port: 8089
+
+logging:
+
+  level:
+    org.springframework.web: ERROR
+    com.stackroute: DEBUG
+    spring.data.mongodb: ERROR
+
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
+    file: "%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n"
+  path: logs
+  file: ${logging.path}/movie_app.log
+
