@@ -6,12 +6,12 @@ spring:
       uri: mongodb://localhost:27017
 eureka:
   client:
-    service.uri.defaultZone: http://localhost:8871/eureka
+    service.uri.defaultZone: http://localhost:8871
     register-with-eureka: true
     fetch.registry: true
 
 server:
-  port: 8089
+   port: 8089
 
 logging:
 
