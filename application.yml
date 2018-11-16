@@ -17,3 +17,6 @@ eureka:         #tells about the Eureka server details and its refresh time
             enabled: true
         lease:
             duration: 5
+    instance:
+        leaseRenewalIntervalInSeconds: 1
+        leaseExpirationDurationInSeconds: 2
