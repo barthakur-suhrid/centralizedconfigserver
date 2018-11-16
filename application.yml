@@ -9,3 +9,11 @@ logging:
       path: logs
       file: ${logging.path}/movie_app.log
 
+eureka:         #tells about the Eureka server details and its refresh time
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8091/eureka/
+        healthcheck:
+            enabled: true
+        lease:
+            duration: 5
